@@ -16,21 +16,21 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="about_us.html">About Us</a>
+                                <a class="nav-link" href="/aboutUs">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="services.html">Services</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="gallery.html">Gallery</a>
+                                <a class="nav-link" href="/services">Services</a>
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="blog.html">Blog</a>
+                                <a class="nav-link" href="/gallery">Gallery</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/blog">Blog</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact_us.html">Contact US</a>
+                                <a class="nav-link" href="/contact_us">Contact US</a>
                             </li>
                         </ul>
             </div>

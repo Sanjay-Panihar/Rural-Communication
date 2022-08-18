@@ -5,7 +5,7 @@
                 <ul class="ulleft">
                     <li>
                         <i class="far fa-envelope"></i>
-                        support@ruralcommunication.com
+                        support@ruralcommunication.org
                         <span>|</span></li>
                     <li>
                         <i class="fas fa-phone-volume"></i>
