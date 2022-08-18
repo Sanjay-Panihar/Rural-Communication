@@ -18,7 +18,12 @@ use App\Http\Controllers\HomeController;
 // Route::get('/', function () {
 //     return view('layouts.main');
 // });
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'home']);
+Route::get('/aboutUs', [HomeController::class, 'aboutUs']);
+Route::get('/services', [HomeController::class, 'services']);
+Route::get('/gallery', [HomeController::class, 'gallery']);
+Route::get('/blog', [HomeController::class, 'blog']);
+Route::get('/contact_us', [HomeController::class, 'contactUs']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
