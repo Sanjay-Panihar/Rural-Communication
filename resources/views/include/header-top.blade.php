@@ -5,7 +5,7 @@
                 <ul class="ulleft">
                     <li>
                         <i class="far fa-envelope"></i>
-                        support@ruralcommunication.org
+                      <a href="mailto:support@ruralcommunication.org">support@ruralcommunication.org </a>
                         <span>|</span></li>
                     <li>
                         <i class="fas fa-phone-volume"></i>
@@ -32,7 +32,7 @@
             </div>
             <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
                 <button class="btn btn-sm btn-success">Join Us</button>
-                <button class="btn btn-sm btn-default">Donate</button>
+                <button class="btn btn-sm btn-default"><a href="/donate">Donate</a></button>
             </div>
         </div>
     </div>

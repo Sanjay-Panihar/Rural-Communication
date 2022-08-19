@@ -10,7 +10,7 @@
 
         <div class="row natur-row no-margin w-100">
             <div class="text-part col-md-6">
-                <h2>About Our Charity</h2>
+                <h2>About Rural Communication</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius faucibus
                     ligula non congue. Suspendisse at pretium massa, sit amet
                     vulputate nibh. Nam posuere eros dolor. Donec vel arcu sagittis, pretium nisl </p>

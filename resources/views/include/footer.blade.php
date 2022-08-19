@@ -21,14 +21,13 @@
           <div class="col-md-4 col-sm-12 map-img">
               <h2>Contact Us</h2>
               <address class="md-margin-bottom-40">
-                  BlueDart <br>
-                  Marthandam (K.K District) <br>
-                  Tamil Nadu, IND <br>
+                  Rural Communication <br>
+                  Alampur (Bhiwani District) <br>
+                  Haryana, IND <br>
                   Phone: +91 9159669599 <br>
-                  Email: <a href="mailto:info@anybiz.com" class="">info@bluedart.in</a><br>
-                  Web: <a href="smart-eye.html" class="">www.bluedart.in</a>
+                  Email: <a href="mailto:support@ruralcommunication.org" class="">support@ruralcommunication.org </a><br>
+                  Web: <a href="{{ url('https://ruralcommunication.org') }}" class="">www.ruralcommunication.org</a>
               </address>
-
           </div>
       </div>
 
@@ -36,12 +35,12 @@
       <div class="nav-box row clearfix">
           <div class="inner col-md-9 clearfix">
               <ul class="footer-nav clearfix">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Gallery</a></li>
-                  <li><a href="#">Servies</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/aboutUs">About</a></li>
+                  <li><a href="/gallery">Gallery</a></li>
+                  <li><a href="/services">Servies</a></li>
+                  <li><a href="/blog">Blog</a></li>
+                  <li><a href="/contact_us">Contact</a></li>
               </ul>
 
 
