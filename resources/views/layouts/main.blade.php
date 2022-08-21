@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
     <title>Rural Communication | @yield('title')</title>
     <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
@@ -14,6 +15,9 @@
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/plugins/slider/css/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css?version=1.0.2" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.min.css?version=1.0.1"/>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.png">
 </head>
 
 <body>
@@ -27,7 +31,7 @@
 
 
   <!-- ******************** Slider Starts Here ******************* -->
-  
+
 
   <!--  ************************* About Us Starts Here ************************** -->
 
@@ -46,5 +50,7 @@
 <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
 <script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
 <script src="assets/js/script.js"></script>
+
+@yield('script')
 
 </html>
