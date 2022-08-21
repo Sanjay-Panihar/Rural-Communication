@@ -256,7 +256,7 @@ header {
   header .header-top {
     background-color: #fff;
     border-bottom: 1px solid #d3d7cea6;
-    padding: 7px; }
+     }
     header .header-top .col-det .ulleft li {
       float: left;
       padding: 12px;
@@ -291,7 +291,7 @@ header {
         border-radius: 50px;
         margin-left: 5px; }
   header .header-bottom {
-    padding: 6px;
+
     background-color: #fff; }
     @media screen and (max-width: 991px) {
       header .header-bottom {
@@ -321,7 +321,7 @@ header {
           width: 100%;
           padding: 10px; } }
       header .nav-col .navbad li a {
-        color: #686968 !important;
+        color: #686968 ;
         border: 1px solid #CCC;
         border-radius: 50px; }
         header .nav-col .navbad li a:hover {

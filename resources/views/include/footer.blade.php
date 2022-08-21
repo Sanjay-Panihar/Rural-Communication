@@ -2,11 +2,11 @@
   <div class="container">
       <div class="row">
           <div class="col-md-4 col-sm-12">
-              <h2>About Us</h2>
+              <h2>Disclaimer</h2>
               <p>
-                  Smart Eye is a leading provider of information technology, consulting, and business process services. Our dedicated employees offer strategic insights, technological expertise and industry experience.
+                No third party agency is working on behalf of Rural Communication for any recruitment, trainings, camps or other activities related to Rural Communication. Please check/consult with Rural Communication directly to get correct information or assistance. Please beware of any unwarranted claims made by anyone on our behalf. Kindly bring any such claims to our notice for immediate attention and action.
               </p>
-              <p>We focus on technologies that promise to reduce costs, streamline processes and speed time-to-market, Backed by our strong quality processes and rich experience managing global... </p>
+              <p>Rural Communication doesn't charge any money from anyone for these activities. So if you come across any individual/ organization making a monetary demand in our name please bring it to our notice immediately on mail@ruralcommunication.org</p>
           </div>
           <div class="col-md-4 col-sm-12">
               <h2>Useful Links</h2>

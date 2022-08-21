@@ -8,8 +8,8 @@
                       <a href="mailto:support@ruralcommunication.org">support@ruralcommunication.org </a>
                         <span>|</span></li>
                     <li>
-                        <i class="fas fa-phone-volume"></i>
-                        +876 987 666 5433</li>
+                        <i class="fas fa-phone-volume"></i><a href="tel:011-26972351">011-26972351</a>
+                      </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 folouws">
@@ -31,8 +31,8 @@
                 </ul>
             </div>
             <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
-                <button class="btn btn-sm btn-success">Join Us</button>
-                <button class="btn btn-sm btn-default"><a href="/donate">Donate</a></button>
+                <button class="btn btn-sm btn btn-outline-success">Join Us</button>
+                <button class="btn btn-sm btn-default {{ Request::segment(1) == 'donate' ? 'active': '' }}"><a href="/donate">Donate</a></button>
             </div>
         </div>
     </div>
