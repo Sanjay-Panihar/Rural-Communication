@@ -13,6 +13,7 @@ Route::get('/gallery', [HomeController::class, 'gallery']);
 Route::get('/blog', [HomeController::class, 'blog']);
 Route::get('/contact_us', [HomeController::class, 'contactUs']);
 Route::get('/donate', [DonateController::class, 'index']);
+Route::post('/donate', [DonateController::class, 'store']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

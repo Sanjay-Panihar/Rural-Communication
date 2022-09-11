@@ -50,6 +50,12 @@
 <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
 <script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
 <script src="assets/js/script.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/velocity.min.js"></script>
+<script src="assets/js/velocity.ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.8/js/select2.min.js" defer></script>
+
 
 @yield('script')
 
