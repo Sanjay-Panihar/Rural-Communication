@@ -20,6 +20,17 @@
         });
     });
 
+    /* Scroll Guidelines*/
+    $(".contribute-guidelines-text #guidelinesCont").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#contributionGuidelines").offset().top - 100
+        }, 1000);
+    });
+    $(".contribute-guidelines-text #offlineCont").click(function () {
+        $('html, body').animate({
+            scrollTop: $("#bankTransfer").offset().top - 100
+        }, 1000);
+    });
 
     /* on donation form submit*/
     $(".donate-form").submit(function (e) {
