@@ -8,18 +8,6 @@
           <div class="row">
               <div style="padding:20px" class="col-sm-6 row align-items-center donation-form-row">
                     <form class="donate-form" action="">
-                        <!-- Donation Option Selection -->
-                        <div class="row text-center">
-                            <div class="col-sm-4 col-4 donation-type-selection active" data-donation-type="once">
-                                <p>One Time</p>
-                            </div>
-                            <div class="col-sm-4 col-4 donation-type-selection" data-donation-type="monthly">
-                                <p>Monthly</p>
-                            </div>
-                            <div class="col-sm-4 col-4 donation-team-5000" id="team5000btn">
-                                <p>Team 5000</p>
-                            </div>
-                        </div>
                         <!-- Donation Amount -->
                         <div class="row align-items-center mx-0 border-radius-5 donation-form-amount">
                             <div class="col-sm-4 col-4">
@@ -48,7 +36,7 @@
                             </div>
                         </div>
                         <!-- Donation Citizenship -->
-                        <div class="row donation-citizen-row">
+                        <!-- <div class="row donation-citizen-row">
                             <div class="col-sm-6 col-6 donation-citizen-selection">
                                 <p>
                                     <input type="radio" class="donation-citizen" name="donation-citizen" value="Indian" id="donationCitizen" checked="">
@@ -61,7 +49,7 @@
                                     <label for="foreignCitizen"> Foreign Citizen</label>
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Donation Submit Button -->
                         <div class="row donation-submit-row">
                             <div class="col-sm-12 d-grid">

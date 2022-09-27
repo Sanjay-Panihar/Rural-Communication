@@ -10,7 +10,7 @@
                 <!-- Modal body -->
                 <div class="modal-body">
                     <p id="formSubTitle" class="text-center mb-3"></p>
-                    <form  action="{{url('/donate')}}" method="POST" enctype="multipart/form-data">
+                    <form  method="POST" enctype="multipart/form-data" id="contribution-form" class="contribution-form">
                         @csrf
 
                         <input type="hidden" name="doner_nationality" id="doner_nationality" readonly="" class="form-control" value="Indian">
@@ -20,7 +20,7 @@
                                 <label for="amountContribute" class="form-label">Amount <span>*</span></label>
                                 <div class="input-group">
                                     <span class="input-group-text" id="basic-addon1">₹</span>
-                                    <input type="text" class="form-control" name="donation_base_amount" id="amountContribute" placeholder="Amount" aria-describedby="basic-addon1" value="2000">
+                                    <input type="number" class="form-control" name="donation_base_amount" id="amountContribute" placeholder="Amount" aria-describedby="basic-addon1" value="2000">
                                 </div>
                             </div>
                             <!-- Mobile Number -->
@@ -188,3 +188,72 @@
             </div>
         </div>
     </div>
+    <form name='razorpayform' id="razorpayform" action="/payment-success" method="POST">
+            @csrf
+            <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
+            <input type="hidden" name="razorpay_signature" id="razorpay_signature">
+            <input type="hidden" name="razorpay_order_id" id="rzpOrderId">
+            <input type="hidden" name="donar_id" id="donar_id" value="">
+        </form>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    //Insert records
+    $('#waitBtn').hide();
+    $('#contribution-form').submit(function(e) {
+        e.preventDefault();
+        let resetError = document.querySelectorAll('.text-danger');
+        resetError.forEach(function(addClass) {
+            addClass.classList.add('d-none');
+        });
+        $('#showBtn').hide();
+        $('#waitBtn').show();
+        var form = $('#contribution-form')[0];
+        var data = new FormData(form);
+        var URL = "{{ URL::to('donate') }}";
+        $.ajax({
+            type: "POST",
+            url: URL,
+            enctype: 'multipart/form-data',
+            data: data,
+            processData: false,
+            contentType: false,
+            cache: false,
+            success: function(data) {
+                if (data) {
+                    proceedToPayment(data);
+                    console.log(data.donar_id);
+                    document.getElementById("rzpOrderId").value = data.order_id;
+                    document.getElementById("donar_id").value = data.donar_id;
+                    $('#showBtn').show();
+                    $('#waitBtn').hide();
+                }
+            },
+            error: function(jqXhr, json, errorThrown) { // this are default for ajax errors
+                var errors = jqXhr.responseJSON;
+                $.each(errors['errors'], function(index, value) {
+                    document.getElementsByClassName(index)[0].innerHTML = value;
+                    document.getElementsByClassName(index)[0].classList.remove('d-none');
+                });
+                $('#showBtn').show();
+                $('#waitBtn').hide();
+
+            }
+        });
+    });
+});
+var proceedToPayment = function(checkoutData) {
+            var options = checkoutData;
+            options.handler = function(response) {
+                document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
+                document.getElementById('razorpay_signature').value = response.razorpay_signature;
+                document.razorpayform.submit();
+            };
+            console.log(options);
+            Razorpay.open(options);
+
+        };
+
+</script>
