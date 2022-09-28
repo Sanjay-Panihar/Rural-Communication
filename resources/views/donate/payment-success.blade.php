@@ -8,7 +8,7 @@
             <div class="content">
                <h1>Payment Success !</h1>
                <p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. </p>
-               <a href="{{ URL::to('donate') }}">Go to Home</a>
+               <a href="{{ URL::to('donate') }}">Go to Donate</a>
             </div>
 
          </div>
