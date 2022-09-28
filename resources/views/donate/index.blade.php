@@ -8,18 +8,6 @@
           <div class="row">
               <div style="padding:20px" class="col-sm-6 row align-items-center donation-form-row">
                     <form class="donate-form" action="">
-                        <!-- Donation Option Selection -->
-                        <div class="row text-center">
-                            <div class="col-sm-4 col-4 donation-type-selection active" data-donation-type="once">
-                                <p>One Time</p>
-                            </div>
-                            <div class="col-sm-4 col-4 donation-type-selection" data-donation-type="monthly">
-                                <p>Monthly</p>
-                            </div>
-                            <div class="col-sm-4 col-4 donation-team-5000" id="team5000btn">
-                                <p>Team 5000</p>
-                            </div>
-                        </div>
                         <!-- Donation Amount -->
                         <div class="row align-items-center mx-0 border-radius-5 donation-form-amount">
                             <div class="col-sm-4 col-4">
@@ -48,7 +36,7 @@
                             </div>
                         </div>
                         <!-- Donation Citizenship -->
-                        <div class="row donation-citizen-row">
+                        <!-- <div class="row donation-citizen-row">
                             <div class="col-sm-6 col-6 donation-citizen-selection">
                                 <p>
                                     <input type="radio" class="donation-citizen" name="donation-citizen" value="Indian" id="donationCitizen" checked="">
@@ -61,7 +49,7 @@
                                     <label for="foreignCitizen"> Foreign Citizen</label>
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Donation Submit Button -->
                         <div class="row donation-submit-row">
                             <div class="col-sm-12 d-grid">
@@ -79,6 +67,43 @@
       </div>
   </div>
 </div>
+<section class="events">
+        <div class="container">
+            <div class="session-title row">
+                <h2>Our Compaigns</h2>
+                <p>We are a non-profital &amp; Charity raising money for child education</p>
+            </div>
+            <div class="event-ro row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="event-box">
+                        <img src="assets/images/events/image_08.jpg" alt="">
+                        <h4>Rahat Floods</h4>
+                        <p class="raises"><span>Raised : $34,425</span> / $500,000 </p>
+                        <p class="desic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industry's </p>
+                        <a href="/donate" class="btn btn-success btn-sm">Donate Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="event-box">
+                        <img src="assets/images/events/image_06.jpg" alt="">
+                        <h4>Child Education in Africa</h4>
+                        <p class="raises"><span>Raised : $34,425</span> / $500,000 </p>
+                        <p class="desic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industry's </p>
+                        <a href="/donate" class="btn btn-success btn-sm">Donate Now</a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="event-box">
+                        <img src="assets/images/events/image_04.jpg" alt="">
+                        <h4>Child Education in Africa</h4>
+                        <p class="raises"><span>Raised : $34,425</span> / $500,000 </p>
+                        <p class="desic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industry's </p>
+                        <a href="/donate" class="btn btn-success btn-sm">Donate Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 <!-- Contribute offline -->
 <section class="contribute-offline" id="bankTransfer">
         <div class="container-lg">
@@ -166,70 +191,12 @@
         </div>
         </div>
     </section>
+@include('donate.donation-modal')
+
 @endsection
 
 @section('script')
-<script type="text/javascript">
-$(".contribute-guidelines-text #guidelinesCont").click(function () {
-        $('html, body').animate({
-            scrollTop: $("#contributionGuidelines").offset().top - 100
-        }, 1000);
-    });
-    $(".contribute-guidelines-text #offlineCont").click(function () {
-        $('html, body').animate({
-            scrollTop: $("#bankTransfer").offset().top - 100
-        }, 1000);
-    });
-    $("#team5000btn").click(function () {
-       window.location.href = "/team-5000"
-   });
 
-   /* Active & Inactive Donation Type Tab i.e. Once and Monthly*/
- let donationType = document.querySelectorAll('.donation-type-selection');
- let donationTypeArr = [...donationType];
- donationTypeArr.forEach(donation => {
-     donation.addEventListener("click", function () {
-         let activeDonation = donation.classList.contains('active');
-         if (!activeDonation) {
-             const donationTypeBtn = Array.from(document.getElementsByClassName('donation-type-selection active'));
-             donationTypeBtn.forEach(btn => {
-                 btn.classList.remove('active');
-             });
-             //document.querySelector(".donation-type-selection.active").classList.remove('active');
-             donation.classList.add('active');
-
-             var checkActiveTab = (donation.getAttribute('data-donation-type') == "monthly");
-             let location = window.location.href;
-             console.log(location);
-
-             /* display frequency*/
-
-           }
-       });
-   });
-   /* Auto fill donation amount */
-    let donationAmount = document.querySelectorAll('.donation-amount-default');
-    let donationAmountArr = [...donationAmount];
-    donationAmountArr.forEach(amount => {
-        amount.addEventListener("click", function () {
-            const boxes = Array.from(document.getElementsByClassName('donation-amount-default'));
-            boxes.forEach(box => {
-                // ✅ Remove class from each element
-                box.classList.remove('active');
-                // ✅ Add class to each element
-                // box.classList.add('small');
-            });
-            amount.classList.add('active');
-            var doantionAmnt = document.getElementsByClassName('donationAmount');
-            console.log(doantionAmnt);
-            for (var i = 0; i < doantionAmnt.length; i++) {
-                doantionAmnt[i].value = amount.getAttribute('data-amount');
-            }
-            //document.getElementById('donationAmount').value = amount.getAttribute('data-amount');
-        });
-    });
-
-</script>
 
 
 @endsection

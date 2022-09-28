@@ -145,3 +145,66 @@ color: #fff!important;
 .active a {
   color: #fff!important;
 }
+.other-donation {
+    padding: 0 0 75px;
+}
+
+element.style {
+}
+.contribution-modal .modal-title {
+    color: #51be78;
+    width: 100%;
+    text-align: center;
+}
+.contribution-form .form-control, .contribution-form .form-select {
+    border-radius: 5px;
+    height: 45px;
+    border: 1px solid #51be78;
+}
+.contribution-form .input-group-text {
+    border: 1px solid #51be78;
+    border-right: 0;
+    background: #fff;
+}
+.accept-box {
+    display: inline-flex;
+    align-items: baseline;
+    font-size: 13px;
+}
+.accept-box input {
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+}
+.contribution-form .form-label span {
+    color: #51be78;
+    font-weight: 500;
+}
+.contribution-modal .modal-footer {
+    border-top: 0;
+    display: inline;
+}
+#contributeModal .btn-rural {
+    margin-top: 0;
+}
+#contributeModal #notes {
+    color: #51be78;
+    font: 500 14px/1.25 "Open Sans";
+    margin-top: 15px;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+.btn-close {
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: 0.25em 0.25em;
+    color: #000;
+    border: 0;
+    border-radius: 0.25rem;
+    opacity: .5;
+    cursor: pointer;
+  }
