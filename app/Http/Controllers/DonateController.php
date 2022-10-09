@@ -7,7 +7,7 @@ use Razorpay\Api\Api;
 use App\Models\PaymentDetails;
 use App\Models\ContactForm;
 use App\Models\DonarDetails;
-use Response;
+use Response, Mail;
 
 class DonateController extends Controller
 {
@@ -68,14 +68,28 @@ class DonateController extends Controller
     }
     public function paymentSuccess(Request $request)
     {
-    $paymentDetails =  PaymentDetails::create([
-      'donar_id'            => $request->donar_id,
-      'razorpay_payment_id' => $request->razorpay_payment_id,
-      'razorpay_signature'  => $request->razorpay_signature,
-      'razorpay_order_id'   => $request->razorpay_order_id
-    ]);
-      return view('donate.payment-success');
+      $donerid = $request->donar_id;
+
+      $paymentDetails =  PaymentDetails::create([
+        'donar_id'            => $donerid,
+        'razorpay_payment_id' => $request->razorpay_payment_id,
+        'razorpay_signature'  => $request->razorpay_signature,
+        'razorpay_order_id'   => $request->razorpay_order_id
+      ]);
+
+      $donar = DonarDetails::find($donerid);
+      $donarEmail = $donar->email;
+      $name = $donar->name;
+      $subject = "Payment Confirmation Email";
+      // Mail::send('email.email-confirm', ['name' => $name],
+      //                 function ($mail) use ($donarEmail, $name, $subject) {
+      //                     $mail->from(getenv('MAIL_FROM_ADDRESS'), getenv('APP_NAME'));
+      //                     $mail->to($donarEmail, $name);
+      //                     $mail->subject($subject);
+      //                 });
+        return view('donate.payment-success');
     }
+
     public function contactForm(Request $request)
     {
       $validated = $request->validate([

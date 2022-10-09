@@ -3,7 +3,7 @@
         <div class="row nav-row">
             <div class="col-lg-3 col-md-12 logo">
                 <a href="/">
-                    <img src="assets/images/logo.jpg" alt="" height="50px">
+                    <img src="{{ url('assets/images/logo.jpg') }}" alt="" height="50px">
                     <a data-toggle="collapse" data-target="#menu" href="#menu"><i class="fas d-block d-lg-none  small-menu fa-bars"></i></a>
                 </a>
 
