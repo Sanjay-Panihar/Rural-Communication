@@ -18,15 +18,6 @@
                     Nulla facilisi. Etiam vestibulum,
                     nisi et convallis elementum, leo orci aliquam metus, id posuere massa neque vitae
                     arcu.</p>
-
-                <p>Integer vulputate vehicula dolor a eleifend. Duis aliquam condimentum sapien,
-                    eget tempor justo. Aenean porttitor nibh metus, sollicitudin egestas metus posuere et
-                    . Fusce egestas volutpat metus, in sodales sem bibendum porta. Nunc hendrerit nunc sit
-                    amet tellus posuere, at malesuada sem gravida. Integer maximus ultricies augue, at
-                    dapibus elit bibendum consequat. Cras faucibus tellus eleifend, fermentum purus in,
-                    dapibus sapien. Praesent nec ornare risus. Etiam iaculis, ligula vel gravida
-                    vestibulum, urna justo posuere ante,
-                    id pretium massa arcu sed mi. Nunc a sollicitudin sem. Duis tempus </p>
             </div>
             <div class="image-part col-md-6">
                 <div class="about-quick-box row">
@@ -36,21 +27,10 @@
                             <p>Becom a Volunteer</p>
                         </div>
                     </div>
-                     <div class="col-md-6">
-                        <div class="about-qcard ">
-                           <i class="fas fa-search-dollar red"></i>
-                            <p>Quick Fundrais</p>
-                        </div>
-                    </div>
+
                      <div class="col-md-6">
                         <div class="about-qcard ">
                            <i class="fas fa-donate yell"></i>
-                            <p>Giv Donation</p>
-                        </div>
-                    </div>
-                     <div class="col-md-6">
-                        <div class="about-qcard ">
-                           <i class="fas fa-hands-helping blu"></i>
                             <p>Help Someone</p>
                         </div>
                     </div>
@@ -69,8 +49,7 @@
           <div class="row mission">
               <div class="col-md-6 mv-det">
                   <h1>Our Mission</h1>
-                  <p>By communication with various government and private departments.
-                  Litrating rural population about policies of various departments through Seminars, Social Media, Hordings etc.</p>
+
                   <p>Communication with government health system providing free transportation and assistant.</p>
               </div>
               <div class="col-md-6 mv-img">
@@ -82,15 +61,31 @@
                    <img src="assets/images/vision.jpg" alt="">
               </div>
               <div class="col-md-6 mv-det">
-                   <h1>Our Vision</h1>
                    <p><h5>Communication for women empowerment.</h5></p>
                     <p>1. Providing an environment free from voilence and descrimination.
                     <p>2. Providing social and economic empowerment of women.</p></p>
                     <p>3. Creating awareness about their rights.</p>
-                    <h5>Communication for social services.</h5>
-                    <p>1. Involvement of local population/villages</p>
-                    <p>2. Cooperation between old and new generation.</p>
-                    <p>3. Work on rural area basic issues.</p>
+
+              </div>
+          </div>
+          <div class="row mission">
+              <div class="col-md-6 mv-det">
+                <h5>Communication for social services.</h5>
+                <p>1. Involvement of local population/villages</p>
+                <p>2. Co-operation between old and new generation.</p>
+                <p>3. Work on rural areas basic issues.</p>
+              </div>
+              <div class="col-md-6 mv-img">
+                  <img src="assets/images/social work.jpg" alt="">
+              </div>
+          </div>
+          <div class="row vision">
+              <div class="col-md-6 mv-img">
+                   <img src="assets/images/literacy.jpeg" alt="">
+              </div>
+              <div class="col-md-6 mv-det">
+                   <h5>Communication with various government and private departments.</h5>
+                   <p>Litrating rural population about policies of various departments through Seminars, Social Media, Hordings etc.</p>
               </div>
           </div>
       </div>
@@ -138,9 +133,6 @@
         </div>
     </section>
 
-
-
-
     <!-- ################# Charity Number Starts Here#######################--->
 
 
@@ -177,56 +169,7 @@ But you can read the following facts in order to make sure of all pluses of our 
     </div>
 
     <!--################### Our Team Starts Here #######################--->
-          <section class="our-team team-11">
-            <div class="container">
-                <div class="session-title row">
-                      <h2>Meet our Team</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vel nisl a dictum. Donec ut est arcu. Donec hendrerit velit</p>
-                </div>
-                <div class="row team-row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-usr">
-                            <img src="assets/images/team/team-memb1.jpg" alt="">
-                            <div class="det-o">
-                                <h4>David Kanuel</h4>
-                                <i>CEO </i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-usr">
-                            <img src="assets/images/team/team-memb2.jpg" alt="">
-                            <div class="det-o">
-                                <h4>David Kanuel</h4>
-                                <i>CFO</i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-usr">
-                            <img src="assets/images/team/team-memb3.jpg" alt="">
-                            <div class="det-o">
-                                <h4>David Kanuel</h4>
-                                <i>Team Leader</i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-usr">
-                            <img src="assets/images/team/team-memb4.jpg" alt="">
-                            <div class="det-o">
-                                <h4>David Kanuel</h4>
-                                <i>Project Manager</i>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>
-
-
+        @include('team.index')
 
     <!-- ################# Our Blog Starts Here#######################--->
 
