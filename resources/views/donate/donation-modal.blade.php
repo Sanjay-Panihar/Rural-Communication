@@ -1,4 +1,4 @@
-<div class="modal contribution-modal show" id="contributeModal" aria-modal="true" role="dialog" style="display: hide;">
+<div class="modal contribution-modal show" id="contributeModal" aria-modal="true" role="dialog" style="display: hide;" data-keyboard="false" data-backdrop="static">
         <div class="modal-dialog">
             <div class="modal-content">
                 <!-- Modal Header -->
