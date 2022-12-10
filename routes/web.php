@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DonateController;
+use App\Http\Controllers\DashboardController;
 
 
 
@@ -17,8 +18,7 @@ Route::post('/donate', [DonateController::class, 'store']);
 Route::post('/payment-success', [DonateController::class, 'paymentSuccess']);
 Route::post('/contact-form-store', [DonateController::class, 'contactForm']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    });
 require __DIR__.'/auth.php';
