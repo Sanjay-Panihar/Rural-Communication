@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DonateController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DonarDetailsController;
 
 
 
@@ -20,5 +21,6 @@ Route::post('/contact-form-store', [DonateController::class, 'contactForm']);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('donar_details', DonarDetailsController::class);
     });
 require __DIR__.'/auth.php';
