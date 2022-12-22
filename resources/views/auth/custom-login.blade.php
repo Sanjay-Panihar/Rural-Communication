@@ -31,13 +31,13 @@
                     <form class="m-t" role="form" action="{{ route('login') }}" method="post">
                       @csrf
                         <div class="form-group">
-                            <input type="email" class="form-control @error('title') is-invalid @enderror" name ="email" placeholder="Username" autocomplete="off" >
+                            <input type="email" class="form-control @error('title') is-invalid @enderror" name ="email" placeholder="Username" autocomplete="off" value="{{old('email')}}">
                         </div>
                         @error('email')
                             <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
                         <div class="form-group">
-                            <input type="password" class="form-control @error('title') is-invalid @enderror" name="password" placeholder="Password" autocomplete="off" >
+                            <input type="password" class="form-control @error('title') is-invalid @enderror" name="password" placeholder="Password" autocomplete="off">
                         </div>
                         @error('password')
                             <div class="alert alert-danger">{{ $message }}</div>
