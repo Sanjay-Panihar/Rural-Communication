@@ -32,7 +32,7 @@
               <form class="m-t" role="form" action="{{ route('password.email') }}" method="post">
                 @csrf
                   <div class="form-group">
-                      <input type="email" class="form-control" name="email" placeholder="Email">
+                      <input type="email" class="form-control" name="email" placeholder="Email" value="{{old('email')}}">
                   </div>
                   @error('email')
                       <div class="alert alert-danger">{{ $message }}</div>
