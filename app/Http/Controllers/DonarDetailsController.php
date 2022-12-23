@@ -47,7 +47,7 @@ class DonarDetailsController extends Controller
      */
     public function show($id)
     {
-        //
+        echo "<pre>"; print_r('show'); die;
     }
 
     /**
@@ -58,7 +58,8 @@ class DonarDetailsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $donarDetail = DonarDetails::findOrFail($id);
+        return view('admin.donar-details.edit', $donarDetail);
     }
 
     /**
@@ -70,7 +71,7 @@ class DonarDetailsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        echo "<pre>"; print_r('update'); die;
     }
 
     /**

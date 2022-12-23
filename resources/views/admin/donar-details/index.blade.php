@@ -28,12 +28,6 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 <i class="fa fa-wrench"></i>
                             </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#">Config option 1</a>
-                                </li>
-                                <li><a href="#">Config option 2</a>
-                                </li>
-                            </ul>
                             <a class="close-link">
                                 <i class="fa fa-times"></i>
                             </a>
@@ -63,7 +57,7 @@
                         <td>{{ $donarDetail->donation_amount}}</td>
                         <td class="center">{{ $donarDetail->mobile_number}}</td>
                         <td class="center"><span class="badge badge-warning">{{ $donarDetail->payment_status == 0 ? 'Pending' : 'Paid'}}</span></td>
-                        <td><button class="btn btn-primary btn-sm">View</button></td>
+                        <td><a href="{{ url('donar_details/'.$donarDetail->id.'/edit')}}" class="btn btn-primary btn-sm">View</a></td>
                     </tr>
                     @endforeach
                     </tbody>
@@ -94,7 +88,7 @@
   <script>
       $(document).ready(function(){
           $('.dataTables-example').DataTable({
-              pageLength: 25,
+              pageLength: 10,
               responsive: true,
               dom: '<"html5buttons"B>lTfgitp',
               buttons: [

@@ -21,7 +21,11 @@
                 </div>
             </li>
             <li>
-                <a href="/dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> </a>
+                <a href="/dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span> </a>
+
+            </li>
+            <li>
+                <a href="{{URL::to('profile') }}"><i class="fa fa-user-circle-o"></i> <span class="nav-label">Profile</span> </a>
 
             </li>
             <li>
