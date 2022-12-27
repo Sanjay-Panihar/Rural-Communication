@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('pan_aadhar');
             $table->string('payment_status')->default(0);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

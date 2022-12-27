@@ -1,6 +1,11 @@
 @extends('admin.layouts.app')
 @section('content')
 @section('title', 'Donar Details')
+@if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@endif
 <div class="row wrapper border-bottom white-bg page-heading">
   <div class="col-lg-10">
       <h2>Donar Details</h2>
@@ -58,7 +63,14 @@
                         <td class="center">{{ $donarDetail->mobile_number}}</td>
                         <td class="center"><span class="badge badge-warning">{{ $donarDetail->payment_status == 0 ? 'Pending' : 'Paid'}}</span>
                         <td><a href="{{ url('donar_details/'.$donarDetail->id.'/edit')}}" class="btn btn-primary btn-sm">View</a>
-                        <a href="{{ url('donar_details/'.$donarDetail->id.'/edit')}}" class="btn btn-danger btn-sm">Delete</a></td>
+                          @if($donarDetail->payment_status == 0)
+                        <form action="{{ URL::to('donar_details', $donarDetail->id)}}" method="post">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-danger btn-sm" name="button">Delete</button>
+                        </form>
+                          @endif
+                      </td>
                     </tr>
                     @endforeach
                     </tbody>

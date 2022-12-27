@@ -95,6 +95,7 @@ class DonarDetailsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DonarDetails::findOrFail($id)->delete();
+        return back()->with('message', 'Record deleted successfully.');
     }
 }
