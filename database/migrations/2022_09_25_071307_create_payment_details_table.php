@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('razorpay_signature');
             $table->string('razorpay_order_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

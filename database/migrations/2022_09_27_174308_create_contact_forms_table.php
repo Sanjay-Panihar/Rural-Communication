@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('mobile_number');
             $table->string('message');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
