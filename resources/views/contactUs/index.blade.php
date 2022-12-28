@@ -4,13 +4,6 @@
 @section('content')
 
 <div class="page-nav no-margin row">
-  @if (\Session::has('success'))
-    <div class="alert alert-success">
-        <ul>
-            <li>{!! \Session::get('success') !!}</li>
-        </ul>
-    </div>
-@endif
        <div class="container">
            <div class="row">
                <h2>Contact Us</h2>
@@ -38,6 +31,15 @@
            <div class="row">
                <div style="padding:20px" class="col-sm-7">
                    <h2 >Contact Form</h2> <br>
+                   @if(session()->has('message'))
+                   <div class="alert alert-success">
+                     {{ session()->get('message') }}
+                   </div>
+                   @elseif(session()->has('error'))
+                   <div class="alert alert-danger">
+                     {{ session()->get('error') }}
+                   </div>
+                   @endif
                    <form class="" action="{{ url('contact-form-store') }}" method="post">
                      @csrf
                    <div class="row cont-row">
