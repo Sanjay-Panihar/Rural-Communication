@@ -105,7 +105,7 @@ class DonateController extends Controller
     'mobile_number'     => $request->mobile_number,
       'message'         => $request->message
     ]);
-      return redirect()->back()->with('success', 'Message sent successfully.');
+      return redirect()->back()->with('message', 'Message sent successfully.');
     }
 
 }
