@@ -5,6 +5,10 @@
     <div class="alert alert-success">
         {{ session()->get('message') }}
     </div>
+@elseif(session()->has('error'))
+<div class="alert alert-danger">
+    {{ session()->get('error') }}
+</div>
 @endif
 <div class="row wrapper border-bottom white-bg page-heading">
   <div class="col-lg-10">

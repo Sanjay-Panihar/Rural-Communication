@@ -32,7 +32,7 @@
                 <a href="{{ URL::to('donar_details')}}"><i class="fa fa-diamond"></i> <span class="nav-label">Donar Details</span></a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Forms Message</span></a>
+                <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Contact Us Message</span></a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Team</span><span class="label label-info pull-right">NEW</span></a>
@@ -49,14 +49,11 @@
             </li>
 
             <li>
-                <a href="grid_options.html"><i class="fa fa-laptop"></i> <span class="nav-label">Grid options</span></a>
+                <a href="grid_options.html"><i class="fa fa-laptop"></i> <span class="nav-label">Notifications</span></a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Tables</span><span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Volunteer</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse">
-                    <li><a href="table_basic.html">Static Tables</a></li>
-                    <li><a href="table_data_tables.html">Data Tables</a></li>
-                    <li><a href="table_foo_table.html">Foo Tables</a></li>
                     <li><a href="jq_grid.html">jqGrid</a></li>
                 </ul>
             </li>
