@@ -75,15 +75,27 @@ class DonarDetailsController extends Controller
       $validator = $request->validate([
             'donar_name'       => 'required',
             'donation_amount'  => 'required',
-            'mobile_number'    => 'required|min:10',
+            'mobile_number'    => 'required|numeric|digits:10',
             'doner_state'      => 'required',
-            'pan_aadhar'        => 'required|min:12',
+            'pan_aadhar'        => 'required|digits:12',
             'donar_email'      => 'required|email',
             'doner_country'    => 'required',
             'doner_city'       => 'required',
-            'doner_pincode'    => 'required|min:6',
+            'doner_pincode'    => 'required|numeric|digits:6',
+        ]);
+        DonarDetails::findOrFail($id)->update([
+          'donar_name'      => $request->doner_name,
+          'donation_amount' => $request->donation_amount,
+          'mobile_number'   => $request->mobile_number,
+          'doner_state'     => $request->doner_state,
+          'pan_aadhar'      => $request->pan_aadhar,
+          'donar_email'     => $request->donar_email,
+          'doner_city'      => $request->doner_city,
+          'doner_country'   => $request->doner_country,
+          'doner_pincode'   => $request->doner_pincode,
         ]);
 
+        return back()->with('message', 'Donar details updated successfully.');
 
     }
 

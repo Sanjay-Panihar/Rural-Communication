@@ -1,6 +1,15 @@
 @extends('admin.layouts.app')
 @section('content')
 @section('title', 'Edit')
+@if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@elseif(session()->has('error'))
+<div class="alert alert-danger">
+    {{ session()->get('error') }}
+</div>
+@endif
 <div class="row">
   <div class="col-md-6">
     <form class="" action="{{ URL::to('donar_details', $donarDetail->id) }}" method="post">
@@ -22,7 +31,7 @@
       </div>
       <div class="form-group">
         <label for="name"> Mobile No.</label>
-        <input type="number" name="mobile_number" class="form-control @error('mobile_number') is-invalid @enderror" value="{{$donarDetail->mobile_number}}" min="1" maxlength="10">
+        <input type="text" name="mobile_number" class="form-control @error('mobile_number') is-invalid @enderror" value="{{$donarDetail->mobile_number}}"  maxlength="10">
         @error('mobile_number')
           <div class="alert alert-danger">{{ $message }}</div>
         @enderror
@@ -71,7 +80,7 @@
     </div>
     <div class="form-group">
       <label for="name"> Pincode</label>
-      <input type="number" name="doner_pincode" class="form-control @error('doner_pincode') is-invalid @enderror" value="{{$donarDetail->doner_pincode}}" min="1" maxlength="6">
+      <input type="text" name="doner_pincode" class="form-control @error('doner_pincode') is-invalid @enderror" value="{{$donarDetail->doner_pincode}}" maxlength="6">
       @error('doner_pincode')
         <div class="alert alert-danger">{{ $message }}</div>
       @enderror
