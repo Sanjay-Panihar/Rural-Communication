@@ -32,7 +32,7 @@
                 <a href="{{ URL::to('donar_details')}}"><i class="fa fa-diamond"></i> <span class="nav-label">Donar Details</span></a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-edit"></i> <span class="nav-label">Contact Us Message</span></a>
+                <a href="{{ URL::to('contact-form')}}"><i class="fa fa-edit"></i> <span class="nav-label">Contact Us</span></a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Team</span><span class="label label-info pull-right">NEW</span></a>

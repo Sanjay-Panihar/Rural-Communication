@@ -95,8 +95,8 @@ class DonateController extends Controller
       $validated = $request->validate([
         'name' => 'required',
         'email' => 'required|email',
-        'mobile_number' => 'required|min:10',
-        'message' => 'required|min:20',
+        'mobile_number' => 'required|numeric|digits:10',
+        'message' => 'required|min:10',
     ]);
 
     $contactForm =  ContactForm::create([
