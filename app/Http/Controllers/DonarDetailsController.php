@@ -59,7 +59,10 @@ class DonarDetailsController extends Controller
      */
     public function edit($id)
     {
-        $donarDetail = DonarDetails::findOrFail($id);
+        $donarDetail = DonarDetails::find($id);
+        if (empty($donarDetail)) {
+          return back()->with('error', 'Details not found.');
+        }
         return view('admin.donar-details.edit', compact('donarDetail'));
     }
 
@@ -107,7 +110,10 @@ class DonarDetailsController extends Controller
      */
     public function destroy($id)
     {
-        DonarDetails::findOrFail($id)->delete();
+      $donarDetail = DonarDetails::find($id)->delete();
+        if (empty($donarDetail)) {
+          return back()->with('error', 'Details not found.');
+        }
         return back()->with('message', 'Record deleted successfully.');
     }
 }
