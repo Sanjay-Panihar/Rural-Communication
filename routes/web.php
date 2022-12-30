@@ -8,6 +8,7 @@ use App\Http\Controllers\DonarDetailsController;
 use App\Http\Controllers\ContactFormController;
 
 
+Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
 
 Route::get('/', [HomeController::class, 'home']);
 Route::get('/aboutUs', [HomeController::class, 'aboutUs']);
