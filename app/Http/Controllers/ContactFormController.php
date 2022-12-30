@@ -47,7 +47,11 @@ class ContactFormController extends Controller
      */
     public function show($id)
     {
-        //
+      $contactForm = ContactForm::find($id);
+      if (empty($contactForm)) {
+        return back()->with('error', 'Message not found.');
+      }
+      return view('admin.contact-form.show', compact('contactForm'));
     }
 
     /**
@@ -81,6 +85,11 @@ class ContactFormController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contactForm = ContactForm::find($id);
+        if (empty($contactForm)) {
+          return back()->with('error', 'Message not found.');
+        }
+        $contactForm->delete();
+        return back()->with('message', 'Message deleted successfully.');
     }
 }

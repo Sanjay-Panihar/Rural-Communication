@@ -1,15 +1,6 @@
 @extends('admin.layouts.app')
 @section('content')
 @section('title', 'Contact Form')
-@if(session()->has('message'))
-    <div class="alert alert-success">
-        {{ session()->get('message') }}
-    </div>
-@elseif(session()->has('error'))
-<div class="alert alert-danger">
-    {{ session()->get('error') }}
-</div>
-@endif
 <div class="row wrapper border-bottom white-bg page-heading">
   <div class="col-lg-10">
       <h2>Contact Us</h2>
@@ -25,6 +16,15 @@
   <div class="col-lg-2">
   </div>
 </div>
+@if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@elseif(session()->has('error'))
+<div class="alert alert-danger">
+    {{ session()->get('error') }}
+</div>
+@endif
 <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
                 <div class="col-lg-12">
@@ -53,7 +53,7 @@
                         <th>Email</th>
                         <th>Mobile No.</th>
                         <th>Message</th>
-                        <th class="text-center">Action</th>
+                        <th class="text-center" colspan="2">Action</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -64,7 +64,14 @@
                       <td>{{ $contactForm->email }}</td>
                       <td>{{ $contactForm->mobile_number }}</td>
                       <td>{{ $contactForm->message }}</td>
-                      <td> <a class="btn btn-primary btn-sm" href="{{ URL::to('contact-form', $contactForm->id)}}">View</a> </td>
+                      <td> <a class="btn btn-primary btn-sm" href="{{ URL::to('contact-form', $contactForm->id)}}">View</a></td>
+                      <td>
+                      <form action="{{ URL::to('contact-form', $contactForm->id)}}" method="post">
+                        @csrf
+                        @method('delete')
+                        <button type="submit" class="btn btn-danger btn-sm" name="button">Delete</button>
+                      </form>
+                      </td>
                     </tr>
                     @endforeach
                     </tbody>
