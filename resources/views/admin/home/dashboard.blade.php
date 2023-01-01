@@ -11,13 +11,18 @@
             <h5>Income</h5>
           </div>
           <div class="ibox-content">
-            <h1 class="no-margins">40 886,200</h1>
+            @php
+            $totalAmount = 0;
+              foreach($donarDetails as $donarDetail)
+                $totalAmount = $totalAmount + $donarDetail->donation_amount;
+            @endphp
+            <h1 class="no-margins">{{ $totalAmount }}</h1>
             <div class="stat-percent font-bold text-success">98% <i class="fa fa-bolt"></i></div>
             <small>Total income</small>
           </div>
         </div>
       </div>
-      <div class="col-lg-3">
+      <!-- <div class="col-lg-3">
         <div class="ibox float-e-margins">
           <div class="ibox-title">
             <span class="label label-info pull-right">Annual</span>
@@ -29,21 +34,21 @@
             <small>New orders</small>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="col-lg-3">
         <div class="ibox float-e-margins">
           <div class="ibox-title">
             <span class="label label-primary pull-right">Today</span>
-            <h5>visits</h5>
+            <h5>Total Donar</h5>
           </div>
           <div class="ibox-content">
-            <h1 class="no-margins">106,120</h1>
+            <h1 class="no-margins">{{$donarDetails->count()}}</h1>
             <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i></div>
-            <small>New visits</small>
+            <small>Active Donar</small>
           </div>
         </div>
       </div>
-      <div class="col-lg-3">
+      <!-- <div class="col-lg-3">
         <div class="ibox float-e-margins">
           <div class="ibox-title">
             <span class="label label-danger pull-right">Low value</span>
@@ -55,7 +60,7 @@
             <small>In first month</small>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <div class="footer">
