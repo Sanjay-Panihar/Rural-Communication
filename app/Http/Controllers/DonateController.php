@@ -20,14 +20,14 @@ class DonateController extends Controller
 
       $validated = $request->validate([
         // 'doner_nationality' => 'required',
-        'donation_base_amount' => 'required',
-        'MobileNumber' => 'required',
+        'donation_base_amount' => 'required|numeric',
+        'MobileNumber' => 'required|digits:10|numeric',
         'doner_name' => 'required',
-        'doner_email' => 'required',
+        'doner_email' => 'required|email',
         'doner_country' => 'required',
         'doner_state' => 'required',
         'doner_city' => 'required',
-        'doner_pincode' => 'required',
+        'doner_pincode' => 'required|min:6|numeric',
         'doner_address' => 'required',
         'pan_aadhar' => 'required|min:12|numeric',
     ]);
@@ -53,7 +53,6 @@ class DonateController extends Controller
     $amount = $request->donation_base_amount * 100;
     $receipt = rand(1111111111, 9999999999);
     $api = new Api(env('RAZOR_KEY'), env('RAZOR_SECRET'));
-
     $order = $api->order->create([
       'receipt' => $receipt,
       'amount' => $amount,
@@ -83,7 +82,7 @@ class DonateController extends Controller
       $subject = "Payment Confirmation Email";
       // Mail::send('email.email-confirm', ['name' => $name],
       //                 function ($mail) use ($donarEmail, $name, $subject) {
-      //                     $mail->from(getenv('MAIL_FROM_ADDRESS'), getenv('APP_NAME'));
+      //                     $mail->from(env('MAIL_FROM_ADDRESS'), env('APP_NAME'));
       //                     $mail->to($donarEmail, $name);
       //                     $mail->subject($subject);
       //                 });
