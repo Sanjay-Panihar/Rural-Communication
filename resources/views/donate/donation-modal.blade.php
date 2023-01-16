@@ -20,7 +20,7 @@
                                 <label for="amountContribute" class="form-label">Amount <span>*</span></label>
                                 <div class="input-group">
                                     <span class="input-group-text" id="basic-addon1">₹</span>
-                                    <input type="number" class="form-control" name="donation_base_amount" id="amountContribute" placeholder="Amount" aria-describedby="basic-addon1" value="2000">
+                                    <input type="number" class="form-control" name="donation_base_amount" id="amountContribute" placeholder="Amount" aria-describedby="basic-addon1" value="2000" min="1">
                                 </div>
                             </div>
                             <!-- Mobile Number -->
@@ -158,7 +158,7 @@
                                 <div class="mb-3 col-sm-6">
                                     <label for="panAadhar" class="form-label"> Enter Government Identity Number
                                         <span>*</span></label>
-                                    <input type="text" class="form-control" name="pan_aadhar" id="panAadhar" placeholder="Government Identity Number" value="{{ old('pan_aadhar') }}">
+                                    <input type="text" class="form-control" name="pan_aadhar" id="panAadhar" placeholder="Government Identity Number" value="{{ old('pan_aadhar') }}" maxlength="12"= required>
                                     @error('pan_aadhar')
                                       <div class="alert alert-danger">{{ $message }}</div>
                                     @enderror
