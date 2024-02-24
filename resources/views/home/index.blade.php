@@ -11,13 +11,9 @@
         <div class="row natur-row no-margin w-100">
             <div class="text-part col-md-6">
                 <h2>About Rural Communication</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius faucibus
-                    ligula non congue. Suspendisse at pretium massa, sit amet
-                    vulputate nibh. Nam posuere eros dolor. Donec vel arcu sagittis, pretium nisl </p>
-                <p> Cras faucibus laoreet nibh, sit amet tincidunt leo mollis in. Etiam eu mauris metus.
-                    Nulla facilisi. Etiam vestibulum,
-                    nisi et convallis elementum, leo orci aliquam metus, id posuere massa neque vitae
-                    arcu.</p>
+                    <p>Rural Communication, which is a not-for profit organization, is determined to fill up the gaping communication gap between the rural areas. Realizing the significant role communication has in socioeconomic advancement, this agency centres on affordable and accessible communication solutions for the disadvantaged rural areas. The approaches like rolling out low-cost internet networks, establishing community radio stations and digital literacy programs help empower rurals to communicate, engage and access the important services. This organization has the aim to further education, healthcare, and economical opportunities, hence create a chance for sustainable development and improve the quality of life in rural areas by facilitating communications.
+
+                    </p>
             </div>
             <div class="image-part col-md-6">
                 <div class="about-quick-box row">
@@ -169,7 +165,7 @@ But you can read the following facts in order to make sure of all pluses of our 
     </div>
 
     <!--################### Our Team Starts Here #######################--->
-        @include('team.index')
+
 
     <!-- ################# Our Blog Starts Here#######################--->
 

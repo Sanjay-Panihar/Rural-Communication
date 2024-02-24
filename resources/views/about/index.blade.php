@@ -25,9 +25,8 @@
         <div class="row natur-row no-margin w-100">
             <div class="text-part col-md-6">
                 <h2>About Our Charity</h2>
-                <p>Started in April 2022, with purpose of literacy, health, women empowerment and maintenance of choupal and dharamshala,
-                  employmennt of children of poor and ecomnomically backward classes. Group marriage work, environmental protection,
-                  sports and other social upliftment. </p>
+                <p>The charity was founded in April 2022 to carry out different missions aimed at sustainably developing our communities. Literacy, health, and women empowerment are our core focus areas; we work to help the most excluded people. However, we are also dedicated to patrimonizing and preserving traditional meeting places like choupals and dharamshalas, which are essential centers for community engagements. Acknowledging the value of disrupting the cycle of poverty, we give employment opportunities to children from economically poor families. Additionally, in the execution of our campaigns, group marriages, environmental protection, sports, and other areas of societal development are incorporated. By encompassing different programs, we are working towards building a more equal and prosperous society for everybody.
+                </p>
 
             </div>
             <div class="image-part col-md-6">

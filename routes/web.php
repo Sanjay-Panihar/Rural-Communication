@@ -1,11 +1,8 @@
 <?php
 
+namespace App\Http\Controllers;
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\DonateController;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\DonarDetailsController;
-use App\Http\Controllers\ContactFormController;
 
 
 Route::get('logs', [\Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index']);
